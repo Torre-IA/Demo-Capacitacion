@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Registro como proveedor</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <p class="sello">Periferia · borrador</p>
+        <h1>Registro como proveedor</h1>
+      </div>
+      <p id="estado-modelo">Cargando el modelo…</p>
+    </header>
+    <div class="layout">
+      <aside>
+        <h2>Solicitudes</h2>
+        <div id="casos"></div>
+        <button id="simular" type="button">Simular envío</button>
+        <button id="nueva" type="button">Nueva sesión</button>
+        <p class="nota">El agente prepara el formulario y el paquete. La firma y el envío los decides tú.</p>
+      </aside>
+      <main>
+        <p id="aviso" class="aviso" hidden>
+          El agente pide confirmación antes de simular el envío. Responde <strong>envía</strong> o <strong>confirmo</strong>. No sale ningún correo real.
+        </p>
+        <div id="historial" aria-live="polite"></div>
+        <form id="formulario">
+          <label for="mensaje">Mensaje para el agente</label>
+          <textarea id="mensaje" rows="3" placeholder="Procesa el caso ec-corp-andina. No envíes nada todavía."></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </main>
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>
